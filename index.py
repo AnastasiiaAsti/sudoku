@@ -11,3 +11,16 @@ grid = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
         [0, 0, 0, 0, 8, 0, 0, 0, 0]]
 
 print(np.matrix(grid))
+
+
+def possible(row, column, number):
+    global grid
+    # is the number in the row?
+    for i in range(0, 9):
+        if grid[row][i] == number:
+            return False
+    # column?
+    for i in range(0, 9):
+        if grid[i][column] == number:
+            return False
+    # square?
